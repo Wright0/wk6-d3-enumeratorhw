@@ -26,8 +26,9 @@ Traveller.prototype.calculateTotalDistanceTravelled = function () {
 
 //This is sort of cheating but I found a simple way to do it using set with spread syntax.
 //The idea behind set is that the items in it can only exist once. It's a set of things. It does the filtering for you.
-//The ... spreads the items in the set out. Sort of allows you to see them? Access them? It puts them side by side anway.
+//The ... spreads the items in the set out. Sort of allows you to see them? Access them? It puts them side by side from what I saw when I played around with it.
 //The [] around it puts that into an array.
+//Technically I used a map so maybe this does count...
 Traveller.prototype.getUniqueModesOfTransport = function () {
   const allTransports = this.journeys.map(journey => journey.transport)
   return [...new Set(allTransports)];
